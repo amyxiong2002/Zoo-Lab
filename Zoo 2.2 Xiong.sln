@@ -1,22 +1,50 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooScenario", "ZooScenario\ZooScenario.csproj", "{475C4CD4-604F-419D-B5FD-8A9E31496169}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{475C4CD4-604F-419D-B5FD-8A9E31496169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{475C4CD4-604F-419D-B5FD-8A9E31496169}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{475C4CD4-604F-419D-B5FD-8A9E31496169}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{475C4CD4-604F-419D-B5FD-8A9E31496169}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-EndGlobal
+<Window x:Class="ZooScenario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZooScenario"
+        mc:Ignorable="d"
+        Title="Programming Concepts A: Zoo" Height="400" Width="500" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Thickness x:Key="ButtonMargin">5</Thickness>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="5">
+            <!-- Start Como Zoo buttons -->
+            <Button x:Name="newComoZooButton" Content="New Como Zoo" Click="newComoZooButton_Click"/>
+            <Button x:Name="darlaFeedDingoButton" Content="Darla, feed dingo" Click="darlaFeedDingoButton_Click"/>
+            <Button x:Name="birthDingoButton" Content="Birth dingo" Click="birthDingoButton_Click"/>
+            <Button x:Name="floraFillVendingMachineButton" Content="Flora, fill vending machine" Click="floraFillVendingMachineButton_Click"/>
+            <!-- End Como Zoo buttons -->
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="3"/>
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+        <Separator Grid.Column="1">
+            <Separator.LayoutTransform>
+                <RotateTransform Angle="90"/>
+            </Separator.LayoutTransform>
+        </Separator>
+        <StackPanel Grid.Column="2" Margin="5">
+            <!-- Start San Diego Zoo buttons -->
+            <Button x:Name="newSanDiegoZooButton" Content="New San Diego Zoo" Click="newSanDiegoZooButton_Click" />
+            <Button x:Name="daveFeedPlatypusButton" Content="Dave, feed platypus" Click="daveFeedPlatypusButton_Click"/>
+            <Button x:Name="birthPlatypusButton" Content="Birth platypus" Click="birthPlatypusButton_Click"/>
+            <Button x:Name="bettyFillVendingMachineButton" Content="Betty, fill vending machine" Click="bettyFillVendingMachineButton_Click"/>
+            <!-- End San Diego Zoo buttons -->
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="3"/>
+                </Style>
+            </StackPanel.Resources>
+        </StackPanel>
+    </Grid>
+</Window>
